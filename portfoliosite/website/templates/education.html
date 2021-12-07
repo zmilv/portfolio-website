@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Education</h2><br>
+    {% for project in all_educations %}
+    <div class="container"><div class="p-4 mb-4 bg-light rounded-3 border border-secondary">
+        <h3>{{project.name}}</h3>
+        <h3>{{project.degree}}</h3>
+        <h4>{{project.duration}}</h4><br></div></div><br>
+    {% endfor %}
+    <h2>University Projects</h2><br>
+    {% for project in all_uniprojects %}
+    <div class="container"><div class="p-4 mb-4 bg-light rounded-3 border border-secondary">
+        <h3>{{project.name}}</h3>
+        {% if project.image1 %}
+            <img class = "project-pic" src="{{ project.image1.url }}">
+        {% endif %}
+        {% if project.image2 %}
+            <img class = "project-pic" src="{{ project.image2.url }}">
+        {% endif %}
+        {% if project.image3 %}
+            <img class = "project-pic" src="{{ project.image3.url }}">
+        {% endif %}
+        {% if project.image4 %}
+            <img class = "project-pic" src="{{ project.image4.url }}">
+        {% endif %}
+    <br>{{project.description|safe}}<br></div></div><br>
+    {% endfor %}
+
+{% endblock %}
