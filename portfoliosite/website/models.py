@@ -33,6 +33,8 @@ class Print(models.Model):
 class WorkExperience(models.Model):
     name = models.CharField(max_length= 255)
     duration = models.CharField(max_length= 255)
+    location = models.CharField(max_length= 255)
+    role = models.CharField(max_length= 255)
     description = models.CharField(max_length= 10000)
 
     def __str__(self):
@@ -42,6 +44,8 @@ class Education(models.Model):
     name = models.CharField(max_length= 255)
     degree = models.CharField(max_length= 255)
     duration = models.CharField(max_length= 255)
+    location = models.CharField(max_length= 255)
+    description = models.CharField(max_length= 10000, null=True, blank=True)
 
     def __str__(self):
         return self.name + ', ID' + str(self.id)
@@ -49,6 +53,7 @@ class Education(models.Model):
 class UniProject(models.Model):
     name = models.CharField(max_length= 255)
     description = models.CharField(max_length= 10000)
+    location = models.CharField(max_length= 255)
     image1 = models.ImageField(null=True, blank=True)
     image2 = models.ImageField(null=True, blank=True)
     image3 = models.ImageField(null=True, blank=True)

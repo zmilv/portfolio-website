@@ -5,9 +5,9 @@
 <h2>Work Experience</h2><br>
     {% for project in all_workexperiences %}
     <div class="container"><div class="p-4 mb-4 bg-light rounded-3 border border-secondary">
-        <h3>{{project.name}}</h3>
+        <h4>{{project.role}}</h4>
         {% if project.image1 %}
-            <img class = "project-pic" src="{{ project.image1.url }}">
+            <br><img class = "project-pic" src="{{ project.image1.url }}">
         {% endif %}
         {% if project.image2 %}
             <img class = "project-pic" src="{{ project.image2.url }}">
@@ -18,8 +18,13 @@
         {% if project.image4 %}
             <img class = "project-pic" src="{{ project.image4.url }}">
         {% endif %}
+        {% if project.image1 %}
+            <br>
+        {% endif %}
+        <h3>{{project.name}}</h3>
+        <h5>{{project.location}}</h5>
         <h5>{{project.duration}}</h5>
-    <br>{{project.description|safe}}<br></div></div><br>
+    <br>{{project.description|safe}}<br></div></div>
     {% endfor %}
 
 {% endblock %}
