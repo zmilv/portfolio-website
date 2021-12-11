@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['SECRETPASSWORD']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 HOST_IP = os.environ['HOSTIP']
 ALLOWED_HOSTS = [HOST_IP, 'www.zmilv.site', 'zmilv.site']
