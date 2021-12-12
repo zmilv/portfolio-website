@@ -40,7 +40,6 @@ def education(request):
     return HttpResponse(template.render(context, request))
 
 def contacts(request):
-    #template = loader.get_template('contacts.html')
     return render(request, 'contacts.html', {'nbar': 'contacts'})
 
 def other(request):
