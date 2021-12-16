@@ -11,6 +11,7 @@ class Project(models.Model):
     image4 = models.ImageField(null=True, blank=True)
     githublink = models.CharField(max_length= 255, null=True, blank=True)
     websitelink = models.CharField(max_length= 255, null=True, blank=True)
+    id = models.IntegerField(primary_key=True)
 
     def __str__(self):
         return self.name + ', ID' + str(self.id)
@@ -26,6 +27,7 @@ class Print(models.Model):
     detailimage2 = models.ImageField(null=True, blank=True)
     detailimage3 = models.ImageField(null=True, blank=True)
     detailimage4 = models.ImageField(null=True, blank=True)
+    
 
     def __str__(self):
         return self.name + ', ID' + str(self.id)
